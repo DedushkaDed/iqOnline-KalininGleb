@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+.header-top {
+    width: 100%;
+    overflow: hidden;
+}
+.logo {
+    float: left;
+}
+.contact-form{
+    float: right;
+    text-align: center;
+
+}
+.contact-form .phone {
+    padding: 0 10px;
+    list-style-type: none;
+}
+.contact-form .phone a {
+    text-decoration: none;
+    color: orangered;
+    font-size: 24px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.navbar a {
+    float: left;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #222222;
+    text-decoration: none;
+    width: 20%;
+    text-align: center;
+}
+.navbar a:nth-last-child(-n+3) {
+    border-left: 1px solid orangered;
+}
+/* Выбранный элемент - navbar */
+a.checked {
+    background-color: orangered;
+}
+/* хлебные крошки */
+.container-breadcrumb {
+    width: 100%;
+    overflow: hidden;
+}
+ul.breadcrumb {
+    display: inline-block;
+}
+ul.breadcrumb li {
+    display: inline;
+}
+ul.breadcrumb li a {
+    color: #505050;
+}
+ul.breadcrumb li+li:before {
+    content: " - ";
+}
+/* основной блок */
+.calculator {
+    background-color: #eee;
+    max-width: 65%;
+    margin-left: 30px;
+    overflow: hidden;
+}
+.calculator .container-left {
+    display: inline-block;
+    width: 100%;
+}
+.container-left .title {
+    color: orangered;
+    text-align: start;
+    padding: 0 15%;
+    font-weight: 500;
+}
+.col-left {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    text-align: center;
+}
+.col-right {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    text-align: start;
+}
+.col-3 {
+    float: left;
+    width: 50%;
+}
+.col-right .content-inline {
+    display: inline;
+    padding-right: 10px;
+}
+.row {
+    margin: 30px 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+label {
+    display: inline-block;
+}
+select,
+input[type=text],
+input[type=number] {
+    width: 150px;
+}
+input[type=submit] {
+    float: right;
+}
+.btn {
+    background-image: linear-gradient(to bottom,  #32cd32 50%, #32cd32 100%);
+    padding: 12px 20px;
+    border: 1px solid #b8b8b8;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+.btn:hover {
+    background-position: right center;
+}
+.col-left-button {
+    width: 30%;
+    float: left;
+}
+.col-right-result {
+    display: inline-block;
+    padding: 10px 30px;
+    color: darkgreen;
+}
+#result {
+    color: black;
+}
+.slider-container {
+    width: 90%;
+    overflow: hidden;
+}
+.slider-container .ui-slider {
+    background: #222222;
+    height: 10px;
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px #fff;
+}
+.slider-container #custom-handle {
+    position: absolute;
+    margin-top: 3px;
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+    border-radius: 100%;
+}
+.slider-container .ui-slider-range {
+    border-radius: 10px;
+    background-color: #4CAF50;
+}
+
+.slider-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.slider-info span {
+    font-style: italic;
+    color: #303030;
+}
+.results {
+    padding: 20px;
+}
+
+
+/* footer */
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+}
+.footer-nav {
+    list-style: none;
+    display: inline-block;
+}
+.footer-nav li {
+    display: inline;
+}
+.footer-nav li a {
+    padding: 14px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: auto;
+        height: auto;
+    }
+    .col-right {
+        width: auto;
+    }
+    .container-left .row {
+        display: flex;
+    }
+    .col-3 {
+        padding: 10px;
+    }
+    .select,
+    input[type=text],
+    input[type=number] {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .calculator {
+        max-width: none;
+    }
+    .row {
+        justify-content: space-evenly;
+    }
+    .col-left {
+        width: auto;
+    }
+    .col-right{
+        width: auto;
+    }
+    .slider-info span {
+        font-size: smaller;
+        
+    }
+    .contact-form, .logo {
+        display: inline-block;
+        float: none;
+        padding: 0 50px;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .navbar a {
+        padding: 10px;
+        font-size: smaller;
+    }
+    footer {
+        position: unset;
+    }
+    .footer-nav li {
+        display: block;
+        padding: 3px 0;
+    }
+    .col-left-button {
+        width: auto;
+        padding: 0px 5px;
+    }
+    .col-right-result {
+        padding: 10px;
+    }
+
+}
